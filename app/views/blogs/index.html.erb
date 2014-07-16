@@ -1,0 +1,21 @@
+
+<h1>My Blog Posts</h1>
+
+<% @blogs.in_groups_of(2) do |group| %>
+  <div class="row">
+    <% group.compact.each do |blog| %>
+      <div class="span4">
+      
+        <h4><%= link_to blog.title, blog %></h4>
+        <%= blog.post %>
+      </div>
+    <% end %>
+  </div>
+<% end %>
+
+
+
+
+
+
+
